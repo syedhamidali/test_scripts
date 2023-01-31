@@ -1,3 +1,11 @@
+'''
+import urllib.request
+url = "https://raw.githubusercontent.com/syedhamidali/test_scripts/master/map_features.py"
+urllib.request.urlretrieve(url, "map_features.py")
+import map_features as mf
+'''
+
+
 import cartopy.crs as ccrs
 import cartopy.feature as feat
 from cartopy.mpl.gridliner import LONGITUDE_FORMATTER, LATITUDE_FORMATTER
