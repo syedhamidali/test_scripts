@@ -14,12 +14,12 @@ Example:
 import nearest_nexrad as nrnx
 # lookup by ID and get lat, lon and elev of the radar
 i)
-`nrnx.get_nexrad_location("kgwx")`
+nrnx.get_nexrad_location("kgwx")
 ii)
 # lookup by lat and lon, get neares radar ID and associated lat, lon, and alt
 lat = 32
 lon = -84
-`nrnx.nearest_site(lat, lon)`
+nrnx.nearest_site(lat, lon)
 """
 
 import numpy as np
