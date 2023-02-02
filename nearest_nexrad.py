@@ -12,10 +12,10 @@ urllib.request.urlretrieve(url, "nearest_nexrad.py")
 Example:
 ========
 import nearest_nexrad as nrnx
+
 # lookup by ID and get lat, lon and elev of the radar
-i)
 nrnx.get_nexrad_location("kgwx")
-ii)
+
 # lookup by lat and lon, get neares radar ID and associated lat, lon, and alt
 lat = 32
 lon = -84
