@@ -38,6 +38,15 @@ def nearest_site(lat, lon):
     sites['distance'] = np.sqrt((sites['lat'] - lat)**2 + (sites['lon'] - lon)**2)
     return sites.loc[[sites['distance'].idxmin()]]
 
+def nearest_sites(lat, lon, n=1):
+    '''
+    Based on Euclidean distances
+    Returns: n number of sites
+    '''
+    sites = nexrad_sites()
+    sites['distance'] = np.sqrt((sites['lat'] - lat)**2 + (sites['lon'] - lon)**2)
+    return sites.sort_values(by='distance').head(n)
+
 def get_nexrad_location(station):
     """
     Return the latitude, longitude and altitude of a NEXRAD station.
