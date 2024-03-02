@@ -36,10 +36,10 @@ def map_features(ax, b=False, l=False, t=False, r=False, coastline=False,
     '''
     gl = ax.gridlines(crs=ccrs.PlateCarree(), linewidth=0.1, color='black', 
                       alpha=0.2, linestyle='-', draw_labels=True)
-    gl.xlabels_top = t
-    gl.xlabels_bottom = b
-    gl.ylabels_left = l
-    gl.ylabels_right = r
+    gl.top_labels = t
+    gl.bottom_labels = b
+    gl.left_labels = l
+    gl.right_labels = r
     if grids:
         gl.xlines = True
         gl.ylines = True
